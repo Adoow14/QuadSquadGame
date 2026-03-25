@@ -2,11 +2,11 @@ using UnityEngine;
 using TMPro;
 public class Stap : MonoBehaviour
 {
-    public TMP_Text mijnTekst;
-    public int stapNummer;
+    [SerializeField] private TMP_Text stapTekst;
 
     void Start()
     {
-        mijnTekst.text = stapNummer;
+        int index = transform.GetSiblingIndex() + 1;
+        stapTekst.text = index.ToString();
     }
 }
