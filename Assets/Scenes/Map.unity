@@ -358,6 +358,38 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9508e2379d1dade46bf195102b615fa5, type: 3}
+--- !u!1 &656209125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656209126}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &656209126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656209125}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1274231707}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1022071150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6170116063747205530, guid: 9508e2379d1dade46bf195102b615fa5, type: 3}
@@ -542,7 +574,7 @@ RectTransform:
   - {fileID: 408759808}
   - {fileID: 1022071150}
   - {fileID: 517899432}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 656209126}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1022,6 +1054,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1329575868}
   - {fileID: 2019197545}
-  - {fileID: 1274231707}
+  - {fileID: 656209126}
   - {fileID: 1248817706}
   - {fileID: 2011538341}
