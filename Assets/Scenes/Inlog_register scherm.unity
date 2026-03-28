@@ -2213,6 +2213,9 @@ MonoBehaviour:
   loginError: {fileID: 496693846}
   registerName: {fileID: 496145759}
   registerPassword: {fileID: 456111186}
+  registerBirthDate: {fileID: 1731041880}
+  registerDoctor: {fileID: 1878043798}
+  registerTreatmentDate: {fileID: 1234894511}
   registerError: {fileID: 668555646}
 --- !u!4 &440680178
 Transform:
@@ -4096,7 +4099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Leeftijd
+  m_text: Geboortedatum
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e20387c31a7b4459677202e7c631ca, type: 2}
   m_sharedMaterial: {fileID: 6773912298468071056, guid: 82e20387c31a7b4459677202e7c631ca, type: 2}
