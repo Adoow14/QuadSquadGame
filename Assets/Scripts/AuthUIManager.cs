@@ -3,7 +3,6 @@ using TMPro;
 
 public class AuthUIManager : MonoBehaviour
 {
-    public GameObject authPanel;
     public GameObject loginPanel;
     public GameObject registerPanel;
 
@@ -14,11 +13,6 @@ public class AuthUIManager : MonoBehaviour
     public TMP_InputField registerName;
     public TMP_InputField registerPassword;
     public TMP_Text registerError;
-
-    public void TogglePanel()
-    {
-        authPanel.SetActive(!authPanel.activeSelf);
-    }
 
     public void ShowLogin()
     {
@@ -40,41 +34,34 @@ public class AuthUIManager : MonoBehaviour
         registerError.text = "";
     }
 
-    public void Login()
+    public void OnLoginClicked()
     {
         loginError.text = "";
 
-        if (loginName.text == "" || loginPassword.text == "")
-        {
-            loginError.text = "Vul alles in!";
-            return;
-        }
+        string username = loginName.text;
+        string password = loginPassword.text;
 
-        if (loginPassword.text.Length < 4)
-        {
-            loginError.text = "Wachtwoord te kort!";
-            return;
-        }
-
-        loginError.text = "Succes!";
+        StartCoroutine(ApiClient.Instance.Login(username, password, OnAuthSuccess, OnAuthError));
     }
 
-    public void Register()
+    public void OnRegisterClicked()
     {
         registerError.text = "";
 
-        if (registerName.text == "" || registerPassword.text == "")
-        {
-            registerError.text = "Vul alles in!";
-            return;
-        }
+        string username = registerName.text;
+        string password = registerPassword.text;
 
-        if (registerPassword.text.Length < 4)
-        {
-            registerError.text = "Wachtwoord te kort!";
-            return;
-        }
+        StartCoroutine(ApiClient.Instance.Register(username, password, OnAuthSuccess, OnAuthError));
+    }
 
-        registerError.text = "Registratie gelukt!";
+    void OnAuthSuccess()
+    {
+        // Login/Register success, Response moet nog komen als parameter
+    }
+
+    void OnAuthError(string error)
+    {
+        loginError.text = error;
+        Debug.LogError("Auth error: " + error);
     }
 }
