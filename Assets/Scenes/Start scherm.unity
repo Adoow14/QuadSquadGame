@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 809514223}
   - component: {fileID: 809514222}
   m_Layer: 0
-  m_Name: QuinnNaam_0
+  m_Name: QuinnNaam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1335,7 +1335,7 @@ GameObject:
   - component: {fileID: 1413721308}
   - component: {fileID: 1413721307}
   m_Layer: 0
-  m_Name: 2fb6c32a-d675-411c-a53f-03e971e5f9b5_0
+  m_Name: Quinn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
