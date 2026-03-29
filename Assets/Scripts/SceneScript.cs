@@ -3,11 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void OpenSpelScene()
     {
-        Debug.Log("OpenMapScene aangeroepen");
+        Debug.Log("OpenSpelScene aangeroepen");
         SceneManager.LoadScene("Spel");
+    }
+
+    public void OpenMapScene()
+    {
+        Debug.Log("OpenMapScene aangeroepen");
+        SceneManager.LoadScene("Map");
     }
 
     public void OpenStartScene()

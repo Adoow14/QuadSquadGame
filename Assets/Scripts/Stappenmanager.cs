@@ -18,11 +18,11 @@ public class Stappenmanager : MonoBehaviour
     public void OpenStap(int stap)
     {
         stapInfo.SetActive(true);
-        gameObject.SetActive(false);
+        gameStap.SetActive(false);
         if (stap == 3)
         {
             Debug.Log("Stap 3 is geopend, hier komt de code voor stap 3");
-            gameObject.SetActive(true);
+            gameStap.SetActive(true);
             geopendeStap.text = "Stap " + currentStap.ToString();
             stapInformatie.text = null;
             return;
