@@ -3,16 +3,28 @@ using UnityEngine;
 
 public class TaalVeranderScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public TextMeshProUGUI titelStart;
-    public TextMeshProUGUI tekstStart;
     public GameObject nederlandseVlag;
     public GameObject engelseVlag;
 
+    void Awake()
+    {
+        Debug.Log("TaalVeranderScript Awake aangeroepen");
+        if(TaalManager.Instance.huidigeTaal == TaalManager.Taal.EN)
+        {
+            nederlandseVlag.SetActive(true);
+            engelseVlag.SetActive(false);
+        }
+        else
+        {
+            engelseVlag.SetActive(true);
+            nederlandseVlag.SetActive(false);
+        }
+    }
+
     public void VeranderNaarNederlands()
     {
-        titelStart.text = "Wind Avontuur";
-        tekstStart.text = "Ben je klaar voor jou avontuur?";
+        Debug.Log("Nederlands geklikt");
+        TaalManager.Instance.SetTaal(TaalManager.Taal.NL);
         nederlandseVlag.SetActive(false);
         engelseVlag.SetActive(true);
     }
@@ -20,8 +32,7 @@ public class TaalVeranderScript : MonoBehaviour
     public void VeranderNaarEngels()
     {
         Debug.Log("Engels geklikt!");
-        titelStart.text = "Wind Adventure";
-        tekstStart.text = "Are you ready for your adventure?";
+        TaalManager.Instance.SetTaal(TaalManager.Taal.EN);
         engelseVlag.SetActive(false);
         nederlandseVlag.SetActive(true);
     }
