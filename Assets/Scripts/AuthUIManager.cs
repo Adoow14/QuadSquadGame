@@ -5,6 +5,7 @@ public class AuthUIManager : MonoBehaviour
 {
     public GameObject loginPanel;
     public GameObject registerPanel;
+    public GameObject SceneScript;
 
     [Header("Login UI")]
     public TMP_InputField loginName;
@@ -73,12 +74,19 @@ public class AuthUIManager : MonoBehaviour
 
     void OnAuthSuccess()
     {
-        // Login/Register success, Response moet nog komen als parameter
+        SceneScript.GetComponent<SceneScript>().OpenMapScene();
     }
 
     void OnAuthError(string error)
     {
-        loginError.text = error;
+        if(TaalManager.Instance.huidigeTaal == TaalManager.Taal.NL)
+        {
+            loginError.text = "Er is iets mis gegaan.";
+        }
+        else
+        {
+            loginError.text = "Something went wrong.";
+        }
         Debug.LogError("Auth error: " + error);
     }
 }
