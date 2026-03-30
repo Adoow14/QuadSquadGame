@@ -30,7 +30,7 @@ public class GameScript : MonoBehaviour
                 blazen = true;
 
                 float huidigeY = bal.transform.position.y;
-                huidigeY += 0.01f;
+                huidigeY += 0.005f;
                 bal.transform.position = new Vector3(bal.transform.position.x, huidigeY, bal.transform.position.z);
 
                 score.text = "Score: " + CalculateScore(huidigeY).ToString();

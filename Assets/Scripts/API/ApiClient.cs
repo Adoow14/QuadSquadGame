@@ -49,9 +49,13 @@ public class ApiClient : MonoBehaviour
             yield break;
         }
 
+        TaalManager.Instance.SetNaam(username);
+
         var response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
 
         var token = response.token;
+
+        
 
         PlayerPrefs.SetString("token", token);
 

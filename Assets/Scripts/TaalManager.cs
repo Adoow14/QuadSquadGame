@@ -5,6 +5,7 @@ using UnityEngine;
 public class TaalManager : MonoBehaviour
 {
     public static TaalManager Instance;
+    private string naamKind = "";
 
     public enum Taal
     {
@@ -41,14 +42,14 @@ public class TaalManager : MonoBehaviour
         {
             //Startscherm
             {"Titel", "Wind Avontuur"},
-            {"StartTekst", "Ben je klaar voor jouw avontuur ?"},
+            {"StartTekst", $"Ben je klaar voor jouw avontuur{naamKind} ?"},
             
             //SpelScherm
             {"InfoSpel", "In dit spel is het de bedoeling dat je de bal in één adem zo ver mogelijk weg blaast !"},
-            {"SpelTekst", "Blaas de bal weg!" },
+            {"SpelTekst", $"Blaas de bal weg{naamKind} !" },
             
             //Inlog
-            {"InlogTekst", "Welkom bij jouw avontuur !" },
+            {"InlogTekst", $"Welkom bij jouw avontuur !" },
             {"NaamInlog", "Naam kind" },
             {"Wachtwoord", "Wachtwoord" },
             {"Inlog", "Inloggen" },
@@ -62,7 +63,7 @@ public class TaalManager : MonoBehaviour
             {"AlAccountTekst", "Heb jij al een account?" },
 
             //MapScherm
-            { "OefenTekst", "Heb je zin om samen oefenen?" },
+            { "OefenTekst", $"Heb je zin om samen oefenen{naamKind} ?" },
             { "OefenKnop", "Begin met oefenen!" },
             { "VolgendeKnop", "Volgende" },
             { "VorigeKnop", "Vorige" }
@@ -72,11 +73,11 @@ public class TaalManager : MonoBehaviour
         {
             //Startscherm
             {"Titel", "Wind Adventure"},
-            {"StartTekst", "Are you ready for your adventure ?"},
+            {"StartTekst", $"Are you ready for your adventure{naamKind} ?"},
             
             //SpelScherm
             {"InfoSpel", "In this game, the goal is to blow the ball as far away as possible in one breath !"},
-            {"SpelTekst", "Blow the ball away !" },
+            {"SpelTekst", $"Blow the ball away{naamKind} !" },
 
             //InlogScherm
             {"InlogTekst", "Welcome to your adventure !" },
@@ -93,7 +94,7 @@ public class TaalManager : MonoBehaviour
             {"AlAccountTekst", "Do you already have an account?" },
 
             //MapScherm
-            {"OefenTekst", "Do you want to practice together?" },
+            {"OefenTekst", $"Do you want to practice together{naamKind} ?" },
             {"OefenKnop", "Start practicing!" },
             {"VolgendeKnop", "Next" },
             {"VorigeKnop", "Previous" }
@@ -114,5 +115,11 @@ public class TaalManager : MonoBehaviour
     {
         huidigeTaal = taal;
         OnTaalVeranderd?.Invoke();
+    }
+
+    public void SetNaam(string naam)
+    {
+        naamKind = " " + naam;
+        LaadTaalData();
     }
 }
