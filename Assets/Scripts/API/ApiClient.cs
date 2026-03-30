@@ -1,3 +1,5 @@
+using System;
+using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -72,13 +74,30 @@ public class ApiClient : MonoBehaviour
         System.Action<string> onError
     )
     {
+        DateTime geboorte;
+        DateTime behandeling;
+
+        if (!DateTime.TryParse(geboorteDatum, out geboorte)){
+            onError?.Invoke("Ongeldige geboorte datum");
+            yield break;
+        }
+
+        if (!DateTime.TryParse(behandelingDatum, out behandeling))
+        {
+            onError?.Invoke("Ongeldige behandeling datum");
+            yield break;
+        }
+
+        string geboorteFormatted = geboorte.ToString("yyyy-MM-dd");
+        string behandelingFormatted = behandeling.ToString("yyyy-MM-dd");
+
         var requestData = new RegisterRequest
         {
             username = username,
             password = password,
-            geboorteDatum = geboorteDatum,
+            geboorteDatum = geboorteFormatted,
             arts = arts,
-            behandelingDatum = behandelingDatum
+            behandelingDatum = behandelingFormatted
         };
 
         string json = JsonUtility.ToJson(requestData);
@@ -99,8 +118,8 @@ public class ApiClient : MonoBehaviour
 
         var response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
 
-        // var token = response.token;
-        // PlayerPrefs.SetString("token", token);
+        var token = response.token;
+        PlayerPrefs.SetString("token", token);
 
         onSuccess?.Invoke();
     }

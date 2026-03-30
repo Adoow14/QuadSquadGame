@@ -1,4 +1,6 @@
 using UnityEngine;
+using System;
+using System.Globalization;
 
 [System.Serializable]
 public class RegisterRequest
