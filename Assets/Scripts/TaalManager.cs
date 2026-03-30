@@ -59,7 +59,13 @@ public class TaalManager : MonoBehaviour
             {"ArtsRegister", "Arts/Zorgverlener" },
             {"BehandelingTypeRegister", "Type Behandeling"},
             {"BehandelDatumRegister", "Behandeldatum dd/mm/jjj" },
-            {"AlAccountTekst", "Heb jij al een account?" }
+            {"AlAccountTekst", "Heb jij al een account?" },
+
+            //MapScherm
+            { "OefenTekst", "Heb je zin om samen oefenen?" },
+            { "OefenKnop", "Begin met oefenen!" },
+            { "VolgendeKnop", "Volgende" },
+            { "VorigeKnop", "Vorige" }
         };
 
         taalData[Taal.EN] = new Dictionary<string, string>
@@ -84,7 +90,14 @@ public class TaalManager : MonoBehaviour
             {"ArtsRegister", "Doctor/Carer" },
             {"BehandelingTypeRegister", "Type of Treatment"},
             {"BehandelDatumRegister", "Treatment Date dd/mm/yyyy" },
-            {"AlAccountTekst", "Do you already have an account?" }
+            {"AlAccountTekst", "Do you already have an account?" },
+
+            //MapScherm
+            {"OefenTekst", "Do you want to practice together?" },
+            {"OefenKnop", "Start practicing!" },
+            {"VolgendeKnop", "Next" },
+            {"VorigeKnop", "Previous" }
+
         };
     }
 
