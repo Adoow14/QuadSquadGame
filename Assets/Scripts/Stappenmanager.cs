@@ -14,6 +14,18 @@ public class Stappenmanager : MonoBehaviour
     public TextMeshProUGUI stapInformatie;
 
     public List<string> TESTstapInformatieLijst = new List<string> { "stap 1", "stap 2", "stap 3", "stap 4", "stap 5", "stap 6" };
+    private string stap = "stap";
+
+    void Awake()
+    {
+        if (TaalManager.Instance.huidigeTaal == TaalManager.Taal.NL)
+        {
+            stap = "Stap";
+        } else
+        {
+            stap = "Step";
+        }
+    }
 
     public void OpenStap(int stap)
     {
@@ -23,12 +35,12 @@ public class Stappenmanager : MonoBehaviour
         {
             Debug.Log("Stap 3 is geopend, hier komt de code voor stap 3");
             gameStap.SetActive(true);
-            geopendeStap.text = "Stap " + currentStap.ToString();
+            geopendeStap.text = stap + " " + currentStap.ToString();
             stapInformatie.text = null;
             return;
         }
         currentStap = stap;
-        geopendeStap.text = "Stap " + currentStap.ToString();
+        geopendeStap.text = stap + " " + currentStap.ToString();
         stapInformatie.text = TESTstapInformatieLijst[stap-1];//Info wat nederlands of engels is afhankelijk van de taal die gekozen is
     }
 
