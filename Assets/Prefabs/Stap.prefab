@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stap
   stapTekst: {fileID: 8345513200846623779}
-  stapNummer: 0
 --- !u!1 &8869971494161013476
 GameObject:
   m_ObjectHideFlags: 0
