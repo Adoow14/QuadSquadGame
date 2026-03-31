@@ -11,13 +11,13 @@ public class TaalVeranderScript : MonoBehaviour
         Debug.Log("TaalVeranderScript Awake aangeroepen");
         if(TaalManager.Instance.huidigeTaal == TaalManager.Taal.EN)
         {
-            nederlandseVlag.SetActive(true);
-            engelseVlag.SetActive(false);
+            nederlandseVlag.SetActive(false);
+            engelseVlag.SetActive(true);
         }
         else
         {
-            engelseVlag.SetActive(true);
-            nederlandseVlag.SetActive(false);
+            engelseVlag.SetActive(false);
+            nederlandseVlag.SetActive(true);
         }
     }
 
@@ -25,15 +25,15 @@ public class TaalVeranderScript : MonoBehaviour
     {
         Debug.Log("Nederlands geklikt");
         TaalManager.Instance.SetTaal(TaalManager.Taal.NL);
-        nederlandseVlag.SetActive(false);
-        engelseVlag.SetActive(true);
+        nederlandseVlag.SetActive(true);
+        engelseVlag.SetActive(false);
     }
 
     public void VeranderNaarEngels()
     {
         Debug.Log("Engels geklikt!");
         TaalManager.Instance.SetTaal(TaalManager.Taal.EN);
-        engelseVlag.SetActive(false);
-        nederlandseVlag.SetActive(true);
+        engelseVlag.SetActive(true);
+        nederlandseVlag.SetActive(false);
     }
 }

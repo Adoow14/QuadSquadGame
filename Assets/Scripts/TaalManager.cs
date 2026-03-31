@@ -47,6 +47,9 @@ public class TaalManager : MonoBehaviour
             //SpelScherm
             {"InfoSpel", "In dit spel is het de bedoeling dat je de bal in één adem zo ver mogelijk weg blaast !"},
             {"SpelTekst", $"Blaas de bal weg{naamKind} !" },
+            {"GameOverTekst", $"Geweldig gedaan{naamKind} !<br>Jouw score is:" },
+            {"Opnieuw", "Opnieuw" },
+            {"Terug", "Terug" },
             
             //Inlog
             {"InlogTekst", $"Welkom bij jouw avontuur !" },
@@ -66,7 +69,14 @@ public class TaalManager : MonoBehaviour
             { "OefenTekst", $"Heb je zin om samen oefenen{naamKind} ?" },
             { "OefenKnop", "Begin met oefenen!" },
             { "VolgendeKnop", "Volgende" },
-            { "VorigeKnop", "Vorige" }
+            { "VorigeKnop", "Vorige" },
+
+            //AccountScherm
+            { "Naam", "Naam" },
+            { "Leeftijd", "Leeftijd" },
+            { "BehandelType", "Behandel Type" },
+            { "BehandelDatum", "Behandel Datum" },
+            { "Arts", "Arts" }
         };
 
         taalData[Taal.EN] = new Dictionary<string, string>
@@ -78,6 +88,9 @@ public class TaalManager : MonoBehaviour
             //SpelScherm
             {"InfoSpel", "In this game, the goal is to blow the ball as far away as possible in one breath !"},
             {"SpelTekst", $"Blow the ball away{naamKind} !" },
+            { "GameOverTekst", $"Great job{naamKind} !<br>Your score is:"  },
+            {"Opnieuw", "Again" },
+            {"Terug", "Back" },
 
             //InlogScherm
             {"InlogTekst", "Welcome to your adventure !" },
@@ -97,8 +110,15 @@ public class TaalManager : MonoBehaviour
             {"OefenTekst", $"Do you want to practice together{naamKind} ?" },
             {"OefenKnop", "Start practicing!" },
             {"VolgendeKnop", "Next" },
-            {"VorigeKnop", "Previous" }
+            {"VorigeKnop", "Previous" },
 
+
+            //AccountScherm
+            {"Naam", "Name" },
+            {"Leeftijd", "Age" },
+            {"BehandelType", "Treatment Type" },
+            {"BehandelDatum", "Treatment Date" },
+            {"Arts", "Doctor" }
         };
     }
 
