@@ -52,7 +52,7 @@ public class TaalManager : MonoBehaviour
             {"Terug", "Terug" },
             
             //Inlog
-            {"InlogTekst", $"Welkom bij jouw avontuur !" },
+            {"InlogTekst", $"Vraag je ouders om hulp!" },
             {"NaamInlog", "Naam kind" },
             {"Wachtwoord", "Wachtwoord" },
             {"Inlog", "Inloggen" },
@@ -93,7 +93,7 @@ public class TaalManager : MonoBehaviour
             {"Terug", "Back" },
 
             //InlogScherm
-            {"InlogTekst", "Welcome to your adventure !" },
+            {"InlogTekst", "Ask your parents for help!" },
             {"NaamInlog", "Child's name" },
             {"Wachtwoord", "Password" },
             {"Inlog", "Log In" },
