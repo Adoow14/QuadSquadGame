@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b482353d54e63584b9cc34008be51305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ApiClient
-  baseUrl: https://localhost:7222/api
+  baseUrl: https://avansictquadsquad.azurewebsites.net/api
 --- !u!4 &834271381
 Transform:
   m_ObjectHideFlags: 0
