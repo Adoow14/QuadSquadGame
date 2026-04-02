@@ -2477,7 +2477,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 333134644}
         m_TargetAssemblyTypeName: SceneScript, Assembly-CSharp
-        m_MethodName: OpenInlogScene
+        m_MethodName: OpenInlogSceneOfAccuontScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

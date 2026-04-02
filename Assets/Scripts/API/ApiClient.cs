@@ -1,10 +1,10 @@
 using System;
-using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
-using System.Text;
 
 
 public class ApiClient : MonoBehaviour
@@ -13,6 +13,7 @@ public class ApiClient : MonoBehaviour
 
     [Header("API Settings")]
     public string baseUrl = "https://localhost:7222/api";
+    public bool ingelogd = false;
 
     void Awake()
     {
@@ -43,6 +44,8 @@ public class ApiClient : MonoBehaviour
         request.downloadHandler = new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Login Request Verstuurd");
+
         yield return request.SendWebRequest();
 
         if (request.result != UnityWebRequest.Result.Success)
@@ -52,6 +55,7 @@ public class ApiClient : MonoBehaviour
         }
 
         TaalManager.Instance.SetNaam(username);
+        ingelogd = true;
 
         var response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
 
@@ -108,6 +112,8 @@ public class ApiClient : MonoBehaviour
         request.downloadHandler = new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
 
+        Debug.Log("Registreer Request Verstuurd");
+
         yield return request.SendWebRequest();
 
         if (request.result != UnityWebRequest.Result.Success)
@@ -116,11 +122,61 @@ public class ApiClient : MonoBehaviour
             yield break;
         }
 
+        TaalManager.Instance.SetNaam(username);
+        ingelogd = true;
+
         var response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
 
         var token = response.token;
         PlayerPrefs.SetString("token", token);
 
         onSuccess?.Invoke();
+    }
+
+    public IEnumerator GetDossier(Action<Dossier> onSuccess)
+    {
+        using var request = UnityWebRequest.Get(baseUrl + "/dossier/");
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Authorization", "Bearer " + PlayerPrefs.GetString("token"));
+
+        Debug.Log("Dossier Request Verstuurd");
+        yield return request.SendWebRequest();
+
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            var err = request.downloadHandler != null ? request.downloadHandler.text : request.error;
+            Debug.Log(err);
+            yield break;
+        }
+
+        var json = request.downloadHandler.text;
+        Debug.Log("Dossier JSON: " + json);
+        var jsons = json.Split("[");
+        json = jsons[1];
+        jsons = json.Split("]");
+        json = jsons[0];
+
+        try
+        {
+            DossierDto dto = JsonUtility.FromJson<DossierDto>(json);
+            if (dto == null)
+            {
+                Debug.Log("Kon Dossier niet parsen uit JSON.");
+                yield break;
+            }
+
+            var dossier = Dossier.FromDto(dto);
+            onSuccess?.Invoke(dossier);
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Fout bij deserialiseren: " + ex.Message);
+        }
+    }
+
+    public void LogUit()
+    {
+        PlayerPrefs.DeleteKey("token");
+        ingelogd = false;
     }
 }

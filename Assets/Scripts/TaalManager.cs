@@ -81,7 +81,8 @@ public class TaalManager : MonoBehaviour
             { "Leeftijd", "Leeftijd" },
             { "BehandelType", "Behandel Type" },
             { "BehandelDatum", "Behandel Datum" },
-            { "Arts", "Arts" }
+            { "Arts", "Arts" },
+            { "LogUit", "LogUit" }
         };
 
         taalData[Taal.EN] = new Dictionary<string, string>
@@ -129,7 +130,8 @@ public class TaalManager : MonoBehaviour
             {"Leeftijd", "Age" },
             {"BehandelType", "Treatment Type" },
             {"BehandelDatum", "Treatment Date" },
-            {"Arts", "Doctor" }
+            {"Arts", "Doctor" },
+            {"LogUit", "Log Out" }
         };
     }
 

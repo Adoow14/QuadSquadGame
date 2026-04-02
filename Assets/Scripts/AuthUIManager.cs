@@ -82,10 +82,12 @@ public class AuthUIManager : MonoBehaviour
         if(TaalManager.Instance.huidigeTaal == TaalManager.Taal.NL)
         {
             loginError.text = "Er is iets mis gegaan.";
+            registerError.text = "Er is iets mis gegaan.";
         }
         else
         {
             loginError.text = "Something went wrong.";
+            registerError.text = "Something went wrong.";
         }
         Debug.LogError("Auth error: " + error);
     }

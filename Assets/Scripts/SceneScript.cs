@@ -21,9 +21,17 @@ public class SceneScript : MonoBehaviour
         SceneManager.LoadSceneAsync("Start scherm");
     }
 
-    public void OpenInlogScene()
+    public void OpenInlogSceneOfAccuontScene()
     {
-        Debug.Log("OpenInlogScene aangeroepen");
-        SceneManager.LoadSceneAsync("Inlog_register scherm");
+        Debug.Log("OpenInlogScene/AccountScene aangeroepen");
+
+        if (ApiClient.Instance.ingelogd)
+        {
+            SceneManager.LoadSceneAsync("AccountInfoScherm");
+        }
+        else
+        {
+            SceneManager.LoadSceneAsync("Inlog_register scherm");
+        }
     }
 }
