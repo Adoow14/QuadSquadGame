@@ -4,6 +4,7 @@ using System.Diagnostics.Contracts;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Stappenmanager : MonoBehaviour
 {
@@ -14,24 +15,24 @@ public class Stappenmanager : MonoBehaviour
     public TextMeshProUGUI stapInformatie;
 
     public List<string> TESTstapInformatieLijst = new List<string> { "stap 1", "stap 2", "stap 3", "stap 4", "stap 5", "stap 6" };
-    private string stap = "stap";
+    private string stap = null;
 
     void Awake()
     {
         if (TaalManager.Instance.huidigeTaal == TaalManager.Taal.NL)
         {
-            stap = "Stap";
+            stap = "Stap ";
         } else
         {
-            stap = "Step";
+            stap = "Step ";
         }
     }
 
-    public void OpenStap(int stap)
+    public void OpenStap(int stapNummer)
     {
         stapInfo.SetActive(true);
         gameStap.SetActive(false);
-        if (stap == 3)
+        if (stapNummer == 3)
         {
             Debug.Log("Stap 3 is geopend, hier komt de code voor stap 3");
             gameStap.SetActive(true);
@@ -39,9 +40,9 @@ public class Stappenmanager : MonoBehaviour
             stapInformatie.text = null;
             return;
         }
-        currentStap = stap;
-        geopendeStap.text = stap + " " + currentStap.ToString();
-        stapInformatie.text = TESTstapInformatieLijst[stap-1];//Info wat nederlands of engels is afhankelijk van de taal die gekozen is
+        currentStap = stapNummer;
+        geopendeStap.text = stap + currentStap.ToString();
+        stapInformatie.text = TaalManager.Instance.GetTekst("Stap"+stapNummer);
     }
 
     public void SluitStap()

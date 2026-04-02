@@ -66,6 +66,11 @@ public class TaalManager : MonoBehaviour
             {"AlAccountTekst", "Heb jij al een account?" },
 
             //MapScherm
+            { "Stap1", "Vandaag ga je naar het ziekenhuis. Dat is een plek waar dokters en verpleegkundigen je helpen om te kijken hoe gezond je bent. Je gaat een test doen voor je longen. Longen helpen je met ademhalen. Je krijgt een apparaat te zien dat lijkt op een buisje waar je in mag blazen. Het doet geen pijn. Je hoeft alleen maar goed te blazen, een beetje zoals wanneer je een ballon opblaast." },
+            { "Stap2", "Voordat de echte test begint, ga je eerst oefenen met ademhalen. Je leert hoe je diep moet inademen en daarna zo hard en lang mogelijk moet uitblazen. Je kunt het zien als een spelletje waarin je probeert zo krachtig mogelijk te blazen. Door goed te oefenen weet je straks precies wat je moet doen tijdens de test." },
+            { "Stap4", "Nu gaan we de echte meting doen. Je krijgt een mondstuk waar je in gaat blazen. Soms krijg je ook een knijpertje op je neus, zodat alle lucht door je mond gaat. Je haalt eerst diep adem, daarna plaats je je mond goed om het buisje en blaas je zo hard en lang mogelijk uit. De computer meet hoe goed jouw longen werken. Je doet dit een paar keer, zodat de meting goed en duidelijk is." },
+            { "Stap5", "Soms krijg je een medicijn dat helpt om je luchtwegen wijder te maken. Je ademt dit medicijn in of slikt het. Daarna moet je ongeveer 15 minuten wachten. In die tijd kun je rustig zitten. Daarna gaan we opnieuw meten om te kijken of het medicijn heeft geholpen." },
+            { "Stap6", "Na het wachten doe je de test nog een keer. Je blaast weer op dezelfde manier als eerst. Zo kan de dokter zien of er verschil is. Daarna is de test klaar. De dokter bekijkt de uitslagen en vertelt hoe goed jouw longen werken." },
             { "OefenTekst", $"Heb je zin om samen oefenen{naamKind} ?" },
             { "OefenKnop", "Begin met oefenen!" },
             { "VolgendeKnop", "Volgende" },
@@ -98,6 +103,7 @@ public class TaalManager : MonoBehaviour
             {"Wachtwoord", "Password" },
             {"Inlog", "Log In" },
             {"Of", "Or" },
+
             //RegisterScherm
             {"Registreer", "Register" },
             {"GeboorteDatumRegister", "Date of Birth" },
@@ -107,6 +113,11 @@ public class TaalManager : MonoBehaviour
             {"AlAccountTekst", "Do you already have an account?" },
 
             //MapScherm
+            { "Stap1", "Today you are going to the hospital. That is a place where doctors and nurses help you to see how healthy you are. You are going to do a test for your lungs. Lungs help you breathe. You will see a device that looks like a tube that you can blow into. It does not hurt. You just need to blow well, a bit like when you blow up a balloon." },
+            { "Stap2", "Before the real test begins, you will first practice breathing. You will learn how to take a deep breath in and then blow out as hard and as long as possible. You can think of it as a game where you try to blow as strongly as you can. By practicing well, you will know exactly what to do during the test." },
+            { "Stap4", "Now we will do the real measurement. You will get a mouthpiece that you blow into. Sometimes you will also get a clip on your nose, so all the air goes through your mouth. First you take a deep breath in, then you place your mouth around the tube and blow out as hard and as long as possible. The computer measures how well your lungs work. You will do this a few times so the measurement is clear and correct." },
+            { "Stap5", "Sometimes you will get medicine that helps to open your airways. You breathe in this medicine or swallow it. After that you have to wait for about 15 minutes. During that time you can sit quietly. After that we will measure again to see if the medicine has helped." },
+            { "Stap6", "After waiting, you will do the test again. You blow in the same way as before. This way the doctor can see if there is a difference. After that the test is finished. The doctor looks at the results and tells you how well your lungs work." },
             {"OefenTekst", $"Do you want to practice together{naamKind} ?" },
             {"OefenKnop", "Start practicing!" },
             {"VolgendeKnop", "Next" },
