@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class AccountInfoScript : MonoBehaviour
 {
@@ -30,7 +31,16 @@ public class AccountInfoScript : MonoBehaviour
         if(dossier.GeboorteDatum != null)
         {
             var today = DateTime.Today;
-            var age = today.Year - dossier.GeboorteDatum.Value.Year;
+            var geboorteDatum = dossier.GeboorteDatum.Value;
+            var age = today.Year - geboorteDatum.Year;
+            if (today.Month < geboorteDatum.Month)
+            {
+                age--;
+            }
+            else if (today.Month == geboorteDatum.Month && today.Day < geboorteDatum.Day)
+            {
+                age--;
+            }
             LeeftijdTekst.text = age.ToString();
         } else
         {

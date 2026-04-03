@@ -151,11 +151,13 @@ public class ApiClient : MonoBehaviour
 
         var json = request.downloadHandler.text;
         Debug.Log("Dossier JSON: " + json);
-        var jsons = json.Split("[");
-        json = jsons[1];
-        jsons = json.Split("]");
-        json = jsons[0];
-
+        if (json.Contains("["))
+        {
+            var jsons = json.Split("[");
+            json = jsons[1];
+            jsons = json.Split("]");
+            json = jsons[0];
+        }
         try
         {
             DossierDto dto = JsonUtility.FromJson<DossierDto>(json);
