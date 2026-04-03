@@ -788,8 +788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131.37, y: -488.02}
-  m_SizeDelta: {x: 457.26, y: 303.96}
+  m_AnchoredPosition: {x: -39.184967, y: -413.84998}
+  m_SizeDelta: {x: 702.41, y: 303.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &489468241
 MonoBehaviour:
@@ -1263,7 +1263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &760886840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1382,8 +1382,8 @@ RectTransform:
   m_Children:
   - {fileID: 1561694217}
   - {fileID: 1528661439}
-  - {fileID: 1873115537}
   - {fileID: 489468240}
+  - {fileID: 1873115537}
   - {fileID: 1984157281}
   - {fileID: 97442834}
   - {fileID: 2101064772}
@@ -2956,7 +2956,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873115536}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3041,8 +3041,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.75, y: -412.34}
-  m_SizeDelta: {x: 393.17, y: 152.59}
+  m_AnchoredPosition: {x: -38.118988, y: -375.69}
+  m_SizeDelta: {x: 643.36, y: 227.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1984157282
 MonoBehaviour:
@@ -3064,7 +3064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Blaas de bal weg!
+  m_text: Blaas de bal weg Merijn!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e20387c31a7b4459677202e7c631ca, type: 2}
   m_sharedMaterial: {fileID: 6773912298468071056, guid: 82e20387c31a7b4459677202e7c631ca, type: 2}
