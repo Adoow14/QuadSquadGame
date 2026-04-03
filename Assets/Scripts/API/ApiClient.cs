@@ -180,5 +180,6 @@ public class ApiClient : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("token");
         ingelogd = false;
+        TaalManager.Instance.SetNaam("");
     }
 }
