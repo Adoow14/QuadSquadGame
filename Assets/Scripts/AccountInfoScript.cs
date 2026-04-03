@@ -26,7 +26,7 @@ public class AccountInfoScript : MonoBehaviour
         NaamTekst.text = dossier.Naam;
         DokterTekst.text = dossier.Arts ?? "";
         BehandelingDatumTekst.text = dossier.BehandelingDatum?.ToString("dd-MM-yyyy") ?? "";
-        BehandTypeTekst.text = dossier.BehandelingType ?? "Longfunctie Test";
+        BehandTypeTekst.text = "Longfunctie Test";
 
         if(dossier.GeboorteDatum != null)
         {
