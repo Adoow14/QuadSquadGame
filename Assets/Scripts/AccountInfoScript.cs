@@ -26,8 +26,14 @@ public class AccountInfoScript : MonoBehaviour
         NaamTekst.text = dossier.Naam;
         DokterTekst.text = dossier.Arts ?? "";
         BehandelingDatumTekst.text = dossier.BehandelingDatum?.ToString("dd-MM-yyyy") ?? "";
-        BehandTypeTekst.text = "Longfunctie Test";
-
+        if (TaalManager.Instance.huidigeTaal == TaalManager.Taal.EN)
+        {
+            BehandTypeTekst.text = "Lungfunction Test";
+        }
+        else
+        {
+            BehandTypeTekst.text = "Longfunctie Test";
+        }
         if(dossier.GeboorteDatum != null)
         {
             var today = DateTime.Today;
