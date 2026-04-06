@@ -59,10 +59,10 @@ public class TaalManager : MonoBehaviour
             {"Of", "Of" },
             //RegistrerenScherm
             {"Registreer", "Registreer" },
-            {"GeboorteDatumRegister", "GeboorteDatum" },
+            {"GeboorteDatumRegister", "GeboorteDatum mm/dd/jjjj" },
             {"ArtsRegister", "Arts/Zorgverlener" },
             {"BehandelingTypeRegister", "Type Behandeling"},
-            {"BehandelDatumRegister", "Behandeldatum dd/mm/jjj" },
+            {"BehandelDatumRegister", "Behandeldatum mm/dd/jjjj" },
             {"AlAccountTekst", "Heb jij al een account?" },
 
             //MapScherm
@@ -107,10 +107,10 @@ public class TaalManager : MonoBehaviour
 
             //RegisterScherm
             {"Registreer", "Register" },
-            {"GeboorteDatumRegister", "Date of Birth" },
+            {"GeboorteDatumRegister", "Date of Birth mm/dd/yyyy" },
             {"ArtsRegister", "Doctor/Carer" },
             {"BehandelingTypeRegister", "Type of Treatment"},
-            {"BehandelDatumRegister", "Treatment Date dd/mm/yyyy" },
+            {"BehandelDatumRegister", "Treatment Date mm/dd/yyyy" },
             {"AlAccountTekst", "Do you already have an account?" },
 
             //MapScherm
